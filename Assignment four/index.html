@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        
+        
+        <div class="input-section">
+            <h2>Student Information:</h2>
+            <div class="input-group">
+                <input type="text" id="studentName" placeholder="Enter student name" required>
+                <input type="number" id="studentAge" placeholder="Enter age" min="1" max="120" required>
+                <input type="email" id="studentEmail" placeholder="Enter email address" required>
+                <button onclick="addStudent()" id="addBtn">Add Student</button>
+                <button onclick="updateStudent()" id="updateBtn" style="display: none;">Update Student</button>
+                <button onclick="cancelEdit()" id="cancelBtn" style="display: none;">Cancel</button>
+            </div>
+            <div id="errorMessage" class="error-message"></div>
+        </div>
+
+        <div class="students-list">
+            <h2>Current Students Status:</h2>
+            <div id="studentsDisplay"></div>
+        </div>
+
+        <div class="filter-section">
+            <h2>Choice as Prefered:</h2>
+            <div class="button-group">
+                <button onclick="getNamesOnly()">Get Names Only</button>
+                <button onclick="filterUnder10()">Filter Age < 10</button>
+                <button onclick="calculateAverageAge()">Calculate Average Age</button>
+                <button onclick="checkAllGenZ()">Check All GenZ</button>
+                <button onclick="listGenZStudents()">List GenZ Students</button>
+                <button style="background-color: red;" onclick="clearResults()">Clear Results</button>
+            </div>
+        </div>
+
+        <div class="results-section">
+            <h2>Results</h2>
+            <div id="results"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

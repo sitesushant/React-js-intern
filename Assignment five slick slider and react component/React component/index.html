@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Component Reuse Example</title>
+    <link rel="stylesheet" href="styles.css">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        // Reusable Card Component
+        function Card({ title, description, buttonText, onButtonClick }) {
+            return (
+                <div className="card">
+                    <h3>{title}</h3>
+                    <p>{description}</p>
+                    <button onClick={onButtonClick}>{buttonText}</button>
+                </div>
+            );
+        }
+
+        // Main App Component
+        function App() {
+            const handleProductClick = () => {
+                alert('Product added to cart!');
+            };
+
+            const handleServiceClick = () => {
+                alert('Service booked!');
+            };
+
+            return (
+                <div className="container">
+                    <h1>React Component Reuse Example</h1>
+                    <p style={{textAlign: 'left', color: '#666'}}>
+                        The same Card component is reused for different purposes
+                    </p>
+
+                    <div className="section">
+                        <h2>Products</h2>
+                        <Card 
+                            title="Laptop" 
+                            description="High-performance laptop" 
+                            buttonText="Add to Cart" 
+                            onButtonClick={handleProductClick} 
+                        />
+                        <Card 
+                            title="Phone" 
+                            description="Latest smartphone" 
+                            buttonText="Add to Cart" 
+                            onButtonClick={handleProductClick} 
+                        />
+                    </div>
+
+                    <div className="section">
+                        <h2>Services</h2>
+                        <Card 
+                            title="Web Design" 
+                            description="Custom website design" 
+                            buttonText="Book Now" 
+                            onButtonClick={handleServiceClick} 
+                        />
+                        <Card 
+                            title="Consulting" 
+                            description="Technical consulting" 
+                            buttonText="Book Now" 
+                            onButtonClick={handleServiceClick} 
+                        />
+                    </div>
+                </div>
+            );
+        }
+
+        // Render the app
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>

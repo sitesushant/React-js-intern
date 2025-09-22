@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        
+        
+        <div class="input-section">
+            <h2>Student Information:</h2>
+            <div class="input-group">
+                <input type="text" id="studentName" placeholder="Enter student name" required>
+                <input type="number" id="studentAge" placeholder="Enter age" min="1" max="120" required>
+                <input type="email" id="studentEmail" placeholder="Enter email address" required>
+                <button onclick="addStudent()" id="addBtn">Add Student</button>
+            </div>
+            <div id="errorMessage" class="error-message"></div>
+        </div>
+
+        <div class="students-list">
+            <h2>Current Students Status:</h2>
+            <div class="table-container">
+                <table id="studentsTable" class="students-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Email</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentsTableBody">
+                        <!-- Student rows will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="filter-section">
+            <h2>Choice as Prefered:</h2>
+            <div class="button-group">
+                <button onclick="getNamesOnly()">Get Names Only</button>
+                <button onclick="filterUnder10()">Filter Age < 10</button>
+                <button onclick="calculateAverageAge()">Calculate Average Age</button>
+                <button onclick="checkAllGenZ()">Check All GenZ</button>
+                <button onclick="listGenZStudents()">List GenZ Students</button>
+                <button style="background-color: red;" onclick="clearResults()">Clear Results</button>
+            </div>
+        </div>
+
+        <div class="results-section">
+            <h2>Results</h2>
+            <div id="results"></div>
+        </div>
+    </div>
+
+    <!-- Edit Student Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Edit Student</h3>
+                <span class="close" onclick="closeEditModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="input-group">
+                    <input type="text" id="editStudentName" placeholder="Enter student name" required>
+                    <input type="number" id="editStudentAge" placeholder="Enter age" min="1" max="120" required>
+                    <input type="email" id="editStudentEmail" placeholder="Enter email address" required>
+                </div>
+                <div id="editErrorMessage" class="error-message"></div>
+            </div>
+            <div class="modal-footer">
+                <button onclick="saveEditStudent()" class="save-btn">Save Changes</button>
+                <button onclick="closeEditModal()" class="cancel-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Confirm Delete</h3>
+                <span class="close" onclick="closeDeleteModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete this student?</p>
+                <div id="deleteStudentInfo" class="student-info"></div>
+            </div>
+            <div class="modal-footer">
+                <button onclick="confirmDeleteStudent()" class="delete-btn">Delete</button>
+                <button onclick="closeDeleteModal()" class="cancel-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+/* Reset and base styles */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  background: #fafafa;
+  color: #111;
+}
+
+/* Button styles */
+.btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: white;
+  color: #111827;
+  border-color: #d1d5db;
+}
+
+/* Input styles */
+.input-wrapper {
+  display: grid;
+  gap: 6px;
+}
+
+.input-label {
+  font-size: 14px;
+  color: #374151;
+}
+
+.input-element {
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: white;
+  outline: none;
+}
+
+

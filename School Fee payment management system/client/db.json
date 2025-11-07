@@ -1,0 +1,107 @@
+{
+  "users": [
+    {
+      "id": "011a",
+      "name": "jhonny",
+      "email": "jhonny@example.com",
+      "password": "1234",
+      "role": "student",
+      "studentId": "dc83"
+    }
+  ],
+  "classes": [
+    {
+      "id": "ef7d",
+      "name": "8"
+    }
+  ],
+  "feeStructures": [
+    {
+      "id": "e7cc",
+      "className": "8",
+      "amount": 10000
+    }
+  ],
+  "studentFeeOverrides": [
+    {
+      "id": "1",
+      "studentId": 1,
+      "amount": 250
+    },
+    {
+      "id": "b086",
+      "studentId": 5,
+      "amount": 1000
+    },
+    {
+      "id": "af2a",
+      "studentId": 20,
+      "amount": 250
+    },
+    {
+      "id": "5e8f",
+      "studentId": 288,
+      "amount": 5
+    }
+  ],
+  "studentExtraCharges": [
+    {
+      "id": "2481",
+      "studentId": "20",
+      "name": "jhonny",
+      "class": "8",
+      "rollNumber": "20",
+      "amount": 55,
+      "date": "2025-11-06",
+      "time": "18:21",
+      "reference": "fine "
+    }
+  ],
+  "students": [
+    {
+      "id": "dc83",
+      "name": "jhonny",
+      "class": "8",
+      "rollNumber": "20",
+      "email": "jhonny@example.com"
+    }
+  ],
+  "payments": [
+    {
+      "id": "7c3e",
+      "studentRoll": "20",
+      "studentName": "jhonny",
+      "studentClass": "8",
+      "amount": 15,
+      "date": "2025-11-03",
+      "time": "16:14",
+      "status": "PAID",
+      "method": "Cash",
+      "reference": "fine paid"
+    },
+    {
+      "id": "6db2",
+      "studentRoll": "20",
+      "studentName": "jhonny",
+      "studentClass": "8",
+      "amount": 2000,
+      "date": "2025-11-03",
+      "time": "16:15",
+      "status": "PAID",
+      "method": "Online",
+      "reference": "OnlinePayment"
+    },
+    {
+      "id": "82a4",
+      "studentRoll": "20",
+      "studentName": "jhonny",
+      "studentClass": "8",
+      "amount": 2000,
+      "date": "2025-11-04",
+      "time": "11:09",
+      "status": "PAID",
+      "method": "Online",
+      "reference": "OnlinePayment"
+    }
+  ]
+}
